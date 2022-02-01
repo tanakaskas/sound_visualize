@@ -1,0 +1,57 @@
+div.wrapper {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+div.board {
+    height: 200px;
+}
+
+div.fore {
+    z-index: 2;
+    position: absolute;
+}
+
+div.back {
+    z-index: 1;
+    position: absolute;
+    top: 20px;
+    /* left: 20px; */
+}
+
+div.back table {
+    border-collapse: collapse;
+    width: 580px;
+    height: 132px;
+    margin-left: 10px;
+}
+
+div.back table td, div.back table th {
+    border:1px solid #333;
+}
+
+div.string {
+    display: flex;
+    width: 600px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    justify-content: space-between;
+}
+
+div.string input[type=radio] {
+    display: inline-flex;
+    border: 2px solid #000000;
+}
+
+div.btn {
+    padding-top: 30px;
+}
+
+div.ch-btn {
+    padding-bottom: 5px;
+}
+
+form {
+    padding-bottom: 10px;
+}

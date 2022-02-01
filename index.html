@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="static/style.css" type="text/css">
+        <title>目で見る音楽理論</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <form name="board">
+                <div class="board">
+                    <div class="back">
+                        <table>
+                            <tr>
+                                <td></td><td></td><td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td><td></td><td></td><td></td>
+                            </tr>
+                            <tr>
+                                <td></td><td></td><td></td><td></td><td></td><td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="fore">
+                        <!-- value の周波数は https://tomari.org/main/java/oto.html を参考にした -->
+                        <div class="string" id="string1">
+                            <input type="radio" id="1-0" name="1" value="1318.510" onclick="radioDeselection(this, 1, 0)">
+                            <input type="radio" id="1-1" name="1" value="1396.913" onclick="radioDeselection(this, 1, 1)">
+                            <input type="radio" id="1-2" name="1" value="1479.978" onclick="radioDeselection(this, 1, 2)">
+                            <input type="radio" id="1-3" name="1" value="1567.982" onclick="radioDeselection(this, 1, 3)">
+                            <input type="radio" id="1-4" name="1" value="1661.219" onclick="radioDeselection(this, 1, 4)">
+                            <input type="radio" id="1-5" name="1" value="1760.000" onclick="radioDeselection(this, 1, 5)">
+                            <input type="radio" id="1-6" name="1" value="1864.655" onclick="radioDeselection(this, 1, 6)">
+                        </div>
+                        <div class="string" id="string2">
+                            <input type="radio" id="2-0" name="2" value="987.767" onclick="radioDeselection(this, 2, 0)">
+                            <input type="radio" id="2-1" name="2" value="1046.502" onclick="radioDeselection(this, 2, 1)">
+                            <input type="radio" id="2-2" name="2" value="1108.731" onclick="radioDeselection(this, 2, 2)">
+                            <input type="radio" id="2-3" name="2" value="1174.659" onclick="radioDeselection(this, 2, 3)">
+                            <input type="radio" id="2-4" name="2" value="1244.508" onclick="radioDeselection(this, 2, 4)">
+                            <input type="radio" id="2-5" name="2" value="1318.510" onclick="radioDeselection(this, 2, 5)">
+                            <input type="radio" id="2-6" name="2" value="1396.913" onclick="radioDeselection(this, 2, 6)">
+                        </div>
+                        <div class="string" id="string3">
+                            <input type="radio" id="3-0" name="3" value="783.991" onclick="radioDeselection(this, 3, 0)">
+                            <input type="radio" id="3-1" name="3" value="830.609" onclick="radioDeselection(this, 3, 1)">
+                            <input type="radio" id="3-2" name="3" value="880.000" onclick="radioDeselection(this, 3, 2)">
+                            <input type="radio" id="3-3" name="3" value="932.328" onclick="radioDeselection(this, 3, 3)">
+                            <input type="radio" id="3-4" name="3" value="987.767" onclick="radioDeselection(this, 3, 4)">
+                            <input type="radio" id="3-5" name="3" value="1046.502" onclick="radioDeselection(this, 3, 5)">
+                            <input type="radio" id="3-6" name="3" value="1108.731" onclick="radioDeselection(this, 3, 6)">
+                        </div>
+                        <div class="string" id="string4">
+                            <input type="radio" id="4-0" name="4" value="587.330" onclick="radioDeselection(this, 4, 0)">
+                            <input type="radio" id="4-1" name="4" value="622.254" onclick="radioDeselection(this, 4, 1)">
+                            <input type="radio" id="4-2" name="4" value="659.255" onclick="radioDeselection(this, 4, 2)">
+                            <input type="radio" id="4-3" name="4" value="698.456" onclick="radioDeselection(this, 4, 3)">
+                            <input type="radio" id="4-4" name="4" value="739.989" onclick="radioDeselection(this, 4, 4)">
+                            <input type="radio" id="4-5" name="4" value="783.991" onclick="radioDeselection(this, 4, 5)">
+                            <input type="radio" id="4-6" name="4" value="830.609" onclick="radioDeselection(this, 4, 6)">
+                        </div>
+                        <div class="string" id="string5">
+                            <input type="radio" id="5-0" name="5" value="440.000" onclick="radioDeselection(this, 5, 0)">
+                            <input type="radio" id="5-1" name="5" value="466.164" onclick="radioDeselection(this, 5, 1)">
+                            <input type="radio" id="5-2" name="5" value="493.883" onclick="radioDeselection(this, 5, 2)">
+                            <input type="radio" id="5-3" name="5" value="523.251" onclick="radioDeselection(this, 5, 3)">
+                            <input type="radio" id="5-4" name="5" value="554.365" onclick="radioDeselection(this, 5, 4)">
+                            <input type="radio" id="5-5" name="5" value="587.330" onclick="radioDeselection(this, 5, 5)">
+                            <input type="radio" id="5-6" name="5" value="622.254" onclick="radioDeselection(this, 5, 6)">
+                        </div>
+                        <div class="string" id="string6">
+                            <input type="radio" id="6-0" name="6" value="329.628" onclick="radioDeselection(this, 6, 0)">
+                            <input type="radio" id="6-1" name="6" value="349.228" onclick="radioDeselection(this, 6, 1)">
+                            <input type="radio" id="6-2" name="6" value="369.994" onclick="radioDeselection(this, 6, 2)">
+                            <input type="radio" id="6-3" name="6" value="391.995" onclick="radioDeselection(this, 6, 3)">
+                            <input type="radio" id="6-4" name="6" value="415.305" onclick="radioDeselection(this, 6, 4)">
+                            <input type="radio" id="6-5" name="6" value="440.000" onclick="radioDeselection(this, 6, 5)">
+                            <input type="radio" id="6-6" name="6" value="466.164" onclick="radioDeselection(this, 6, 6)">
+                        </div>
+                    </div>
+                </div>
+                <div class="ch-btn">
+                    <span>major</span>
+                    <input type="button" value="C" onclick="setChord(['5-3', '4-2', '3-0', '2-1', '1-0']);">
+                    <input type="button" value="D" onclick="setChord(['4-0', '3-2', '2-3', '1-2']);">
+                    <input type="button" value="E" onclick="setChord(['6-0', '5-2', '4-2', '3-1', '2-0', '1-0']);">
+                    <input type="button" value="F" onclick="setChord(['6-1', '5-3', '4-3', '3-2', '2-1', '1-1']);">
+                    <input type="button" value="G" onclick="setChord(['6-3', '5-2', '4-0', '3-0', '2-0', '1-3']);">
+                    <input type="button" value="A" onclick="setChord(['5-0', '4-2', '3-2', '2-2', '1-0']);">
+                    <input type="button" value="B" onclick="setChord(['5-2', '4-4', '3-4', '2-4', '1-2']);">
+                </div>
+                <div class="ch-btn">
+                    <span>minor</span>
+                    <input type="button" value="Cm" onclick="setChord(['5-3', '4-5', '3-5', '2-4', '1-3']);">
+                    <input type="button" value="Dm" onclick="setChord(['4-0', '3-2', '2-3', '1-1']);">
+                    <input type="button" value="Em" onclick="setChord(['6-0', '5-2', '4-2', '3-0', '2-0', '1-0']);">
+                    <input type="button" value="Fm" onclick="setChord(['6-1', '5-3', '4-3', '3-1', '2-1', '1-1']);">
+                    <input type="button" value="Gm" onclick="setChord(['6-3', '5-5', '4-5', '3-3', '2-3', '1-3']);">
+                    <input type="button" value="Am" onclick="setChord(['5-0', '4-2', '3-2', '2-1', '1-0']);">
+                    <input type="button" value="Bm" onclick="setChord(['5-2', '4-4', '3-4', '2-3', '1-2']);">
+                </div>
+                <div class="ch-btn">
+                    <span>major 7th</span>
+                    <input type="button" value="Cmaj7" onclick="setChord(['5-3', '4-2', '3-0', '2-0', '1-0']);">
+                    <input type="button" value="Dmaj7" onclick="setChord(['4-0', '3-2', '2-2', '1-2']);">
+                    <input type="button" value="Emaj7" onclick="setChord(['6-0', '5-2', '4-1', '3-1', '2-0', '1-0']);">
+                    <input type="button" value="Fmaj7" onclick="setChord(['6-1', '4-2', '3-2', '2-1']);">
+                    <input type="button" value="Gmaj7" onclick="setChord(['6-3', '5-2', '4-0', '3-0', '2-0', '1-2']);">
+                    <input type="button" value="Amaj7" onclick="setChord(['5-0', '4-2', '3-1', '2-2', '1-0']);">
+                    <input type="button" value="Bmaj7" onclick="setChord(['5-2', '4-4', '3-3', '2-4', '1-2']);">
+                </div>
+                <div class="ch-btn">
+                    <span>diminished</span>
+                    <input type="button" value="Cdim" onclick="setChord(['5-3', '4-4', '3-5', '2-4']);">
+                    <input type="button" value="Ddim" onclick="setChord(['4-0', '3-1', '1-1']);">
+                    <input type="button" value="Edim" onclick="setChord(['4-2', '3-3', '1-3']);">
+                    <input type="button" value="Fdim" onclick="setChord(['6-1', '4-2', '3-2', '2-1']);">
+                    <input type="button" value="Gdim" onclick="setChord(['6-3', '3-3', '2-2']);">
+                    <input type="button" value="Adim" onclick="setChord(['5-0', '4-1', '3-2', '2-1']);">
+                    <input type="button" value="Bdim" onclick="setChord(['5-2', '4-3', '3-4', '2-3']);">
+                </div>
+                <div class="btn">
+                    <input type="button" value="リセット" onclick="offRadio();">
+                </div>
+                <div class="btn">
+                    <input type="button" id="look" value="見る！">
+                </div>
+            </form>
+
+            <canvas id="chart"></canvas>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        <script type="text/javascript" src="static/script.js"></script>
+    </body>
+</html>
